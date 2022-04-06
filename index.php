@@ -6,85 +6,11 @@
     <meta http-equiv="Content-Language" content="fr-FR" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta http-equiv="Expires" content="none" />
-    <!-- Gestion des robots -->
-    <meta name="robots" content="index,follow" />
-    <meta name="copyright" content="Spin Interactive" />
-    <meta name="Author" content="Spin interactive" />
-    <meta name="Publisher" content="Spin Interactive" />
-    <meta name="Revisit-After" content="10 days" />
     <!-- Gestion du viewport -->
     <meta name="viewport" id="myViewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="assets/img/favicon.ico" />
-    <link rel="image_src" href="" />
     <!-- Gestion SEO -->
-    <title>Club Med - Interaktive Resortauswahl</title>
+    <title>Projet Pagination</title>
     <meta name="description" content="" />
-    <!-- Gestion Réseaux sociaux -->
-    <meta property="og:url" content="http://ns.clubmed.com/fbs/2016/133/MAPWINTER/index-de_CH.html" />
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Club Med" />
-    <meta property="og:title" content="Club Med - finden Sie Ihr Traum-Skiresort in den Alpen !"/>
-    <meta property="og:description" content="Ich habe das #ClubMed Ski-Resort meiner Träume gefunden. Guck Dir doch auch mal die besten Skigebiete für all-inclusive Ferien im Schnee hier an !" />
-    <meta property="og:image" content="http://ns.clubmed.com/fbs/2016/133/MAPWINTER/assets/img/carte_interactive_neige.jpg" />
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <script type="text/javascript" src="lib/cssbrowserselector.js"></script>
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9oQfMeXTZgSSR2Z6gCUrCGFS6VwP5scE&language=de"></script>
-    <script type="text/javascript" src="lib/jquery.js"></script>
-    <script type="text/javascript" src="lib/iscroll.js"></script>
-    <script type="text/javascript" src="lib/infobubble.js"></script>
-    <script type="text/javascript" src="lib/session.js"></script>
-    <script type="text/javascript" src="lib/loader.js"></script>
-    <script type="text/javascript" src="lib/tools.js"></script>
-    <!--<script type="text/javascript" src="lib/analytics.js"></script>-->
-    <script type="text/javascript">
-        var lang;
-        var locale = "de_CH";
-        if((new RegExp(/\?lang=([a-zA-Z_]{5})$/).exec(location.href)) != null) {
-            locale = (new RegExp(/\?lang=([a-zA-Z_]{5})$/).exec(location.href))[1];
-        }
-        $.ajax({async:false, cache:false, dataType:"json" , url:"data/locale/"+locale+"/ui.json", success: function(data) {
-            lang = data;
-        }});
-        $(function() {
-            $.each($(".translate"), function(a, b) {
-                $(b).html(lang[$(b).data("translate")]);
-            });
-        });
-    </script>
-    <script type="text/javascript" src="eventlistener.js"></script>
-    <script type="text/javascript" src="modules/filtres.js"></script>
-    <script type="text/javascript" src="modules/fiche.village.js"></script>
-    <script type="text/javascript" src="modules/fiche.domaine.js"></script>
-    <script type="text/javascript" src="modules/carousel.js"></script>
-    <script type="text/javascript" src="modules/appdata.js"></script>
-    <script type="text/javascript" src="modules/map.style.js"></script>
-    <script type="text/javascript" src="modules/map.js"></script>
-    <script type="text/javascript" src="app.js"></script>
-    <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-72862504-8', 'auto');
-    ga('send', 'pageview');
-    </script>
-    <script type="text/javascript" id="dloader-cm" src="//ns.clubmed.com/fbs/RWD/header_footer_v2/dloader.js?locale=de_CH&utm=map"></script>
-    <style type="text/css">
-        @media (min-width: 801px) {
-            #CommonLayout-header span { color:#333333!important;border-color:#333333!important; }
-            #CommonLayout-header .Header-col-logo svg path { fill:#333333!important; }
-        }
-        @font-face{font-family:"TradeGothicSpin";
-            src:url('fonts/TradeGothicLTProBold.eot');
-            src:url('fonts/TradeGothicLTProBold.eot?#iefix') format('embedded-opentype'),
-            url('fonts/TradeGothicLTProBold.woff') format('woff'),
-            url('fonts/TradeGothicLTProBold.svg#abcd') format('svg'),
-            url('fonts/TradeGothicLTProBold.ttf') format('truetype');
-            font-weight:700;
-            font-style:normal;
-        }
-    </style>
 </head>
 <body class="carte_neige">
 <div style="visibility:hidden;width:0;height:0;left:0;top:0;position:absolute;">
